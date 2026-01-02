@@ -3,9 +3,6 @@ import helmet from "helmet";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 
-import { PORT } from "./config/env.config.js";
-// const PORT = 3000;
-
 export const app = express();
 
 // Security
@@ -33,7 +30,3 @@ app.get("/health", (req, res) => {
 });
 
 // Errors
-
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
